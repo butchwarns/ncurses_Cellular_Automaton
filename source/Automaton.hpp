@@ -11,7 +11,8 @@
 class Automaton {
 public:
     /**
-     * @brief Allocate memory and initialise with false
+     * @brief Allocate memory and initialise neighbourhood, state and
+     * rule arrays as all false
      *
      * @param _stateLength Memory allocated in number of cells in state array
      */
@@ -28,7 +29,7 @@ public:
     void init();
 
     /**
-     * @brief Clear automaton state arrays
+     * @brief Set state arrays to all false
      */
     void reset();
 
@@ -40,7 +41,7 @@ public:
     void setRule (int _rule);
 
    /**
-    * @brief Returns current rule
+    * @brief Returns rule currently set
     */
     int getRule();
 
@@ -54,11 +55,13 @@ public:
 
    /**
     * @brief Returns rule bits array
+    *
+    * @return array of rule bits
     */
     bool* getRuleBits();
 
     /**
-     * @brief Calculate next state, current state becomes next state
+     * @brief Calculate next state, then current state becomes next state
      */
     void advanceState();
 

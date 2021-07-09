@@ -1,6 +1,6 @@
 #include "Automaton.hpp"
 
-Automaton::Automaton (int _stateLength) : stateLength (_stateLength), rule (110)
+Automaton::Automaton (int _stateLength) : stateLength (_stateLength), rule (105)
     {
         // Allocate memory
         state = new bool [stateLength];
@@ -106,7 +106,7 @@ void Automaton::advanceState()
                         neighbourhood += (bit * (int) pow (2, 2 - i));
                     }
 
-                // Apply rule with bits in reverse order to determine next state
+                // Apply rule using bits in reverse order to determine next state
                 switch (neighbourhood)
                     {
                     case (0):
@@ -137,7 +137,7 @@ void Automaton::advanceState()
 
             }
         // Next state becomes current state
-        // Pointer swap to reuse allocated memory
+        // Pointer swap reuses allocated memory
         bool* temp = state;
         state = nextState;
         nextState = temp;

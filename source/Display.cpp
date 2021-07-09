@@ -74,6 +74,7 @@ void Display::displayState (bool *state, int pos)
                 else
                     mvwaddch (automatonWin, pos, cell + 1, ' ');
             }
+
         wrefresh (automatonWin);
     }
 

@@ -79,14 +79,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a08eeb50b56cbbbad9511ff5a77c940d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a08eeb50b56cbbbad9511ff5a77c940d3">Display</a> (int rows, int cols)</td></tr>
-<tr class="memdesc:a08eeb50b56cbbbad9511ff5a77c940d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory and set size of the main window.  <a href="class_display.html#a08eeb50b56cbbbad9511ff5a77c940d3">More...</a><br /></td></tr>
+<tr class="memdesc:a08eeb50b56cbbbad9511ff5a77c940d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create main WINDOW* with given size.  <a href="class_display.html#a08eeb50b56cbbbad9511ff5a77c940d3">More...</a><br /></td></tr>
 <tr class="separator:a08eeb50b56cbbbad9511ff5a77c940d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2607a6bb236c55547a4223d40d85d1f"><td class="memItemLeft" align="right" valign="top"><a id="ac2607a6bb236c55547a4223d40d85d1f"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ac2607a6bb236c55547a4223d40d85d1f">~Display</a> ()</td></tr>
-<tr class="memdesc:ac2607a6bb236c55547a4223d40d85d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free allocated memory. <br /></td></tr>
+<tr class="memdesc:ac2607a6bb236c55547a4223d40d85d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete main WINDOW*. <br /></td></tr>
 <tr class="separator:ac2607a6bb236c55547a4223d40d85d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a09a2d148cf4d09f383ffefe2c1e49"><td class="memItemLeft" align="right" valign="top">WINDOW *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a88a09a2d148cf4d09f383ffefe2c1e49">createWindow</a> (int rows, int cols, int winY, int winX)</td></tr>
-<tr class="memdesc:a88a09a2d148cf4d09f383ffefe2c1e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new window.  <a href="class_display.html#a88a09a2d148cf4d09f383ffefe2c1e49">More...</a><br /></td></tr>
+<tr class="memdesc:a88a09a2d148cf4d09f383ffefe2c1e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new curses WINDOW* with a box around it.  <a href="class_display.html#a88a09a2d148cf4d09f383ffefe2c1e49">More...</a><br /></td></tr>
 <tr class="separator:a88a09a2d148cf4d09f383ffefe2c1e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accceb2ed9cd3712e1adbc3043647f341"><td class="memItemLeft" align="right" valign="top"><a id="accceb2ed9cd3712e1adbc3043647f341"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#accceb2ed9cd3712e1adbc3043647f341">reset</a> ()</td></tr>
@@ -103,12 +103,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a3caf3aa350c9bcd039d8c01dfc136cdf">getPosition</a> ()</td></tr>
 <tr class="memdesc:a3caf3aa350c9bcd039d8c01dfc136cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current position. <br /></td></tr>
 <tr class="separator:a3caf3aa350c9bcd039d8c01dfc136cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3795a0063e6a8ca445c895c8753f53f9"><td class="memItemLeft" align="right" valign="top"><a id="a3795a0063e6a8ca445c895c8753f53f9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a3795a0063e6a8ca445c895c8753f53f9">getAutomatonWinRows</a> ()</td></tr>
-<tr class="memdesc:a3795a0063e6a8ca445c895c8753f53f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns rows of main window. <br /></td></tr>
+<tr class="memitem:a3795a0063e6a8ca445c895c8753f53f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a3795a0063e6a8ca445c895c8753f53f9">getAutomatonWinRows</a> ()</td></tr>
+<tr class="memdesc:a3795a0063e6a8ca445c895c8753f53f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of rows in main window.  <a href="class_display.html#a3795a0063e6a8ca445c895c8753f53f9">More...</a><br /></td></tr>
 <tr class="separator:a3795a0063e6a8ca445c895c8753f53f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2754d8d9ee4869f11ed485534237b272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a2754d8d9ee4869f11ed485534237b272">displayState</a> (bool *state, int pos)</td></tr>
-<tr class="memdesc:a2754d8d9ee4869f11ed485534237b272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays state in specified line.  <a href="class_display.html#a2754d8d9ee4869f11ed485534237b272">More...</a><br /></td></tr>
+<tr class="memdesc:a2754d8d9ee4869f11ed485534237b272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays state at specified line.  <a href="class_display.html#a2754d8d9ee4869f11ed485534237b272">More...</a><br /></td></tr>
 <tr class="separator:a2754d8d9ee4869f11ed485534237b272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13b2f3ed75146ea244389a6a9333d14"><td class="memItemLeft" align="right" valign="top"><a id="aa13b2f3ed75146ea244389a6a9333d14"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#aa13b2f3ed75146ea244389a6a9333d14">displayRule</a> (int rule, bool *ruleBits)</td></tr>
@@ -136,7 +135,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Text-based user interface. </p>
-<p>Handles all graphics work. </p>
+<p>Handles all graphics work </p>
 
 <p class="definition">Definition at line <a class="el" href="_display_8hpp_source.html#l00012">12</a> of file <a class="el" href="_display_8hpp_source.html">Display.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -166,11 +165,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>Allocate memory and set size of the main window. </p>
+<p>Create main WINDOW* with given size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rows</td><td>Rows that can be shown on terminal screen </td></tr>
-    <tr><td class="paramname">cols</td><td>Columns that can be shown on terminal screen </td></tr>
+    <tr><td class="paramname">rows</td><td>Number of rows that can be shown on terminal screen </td></tr>
+    <tr><td class="paramname">cols</td><td>Number of columns that can be shown on terminal screen </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,7 +217,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>Create a new window. </p>
+<p>Create a new curses WINDOW* with a box around it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rows</td><td>Window height in rows </td></tr>
@@ -228,7 +227,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to created ncurses window </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to newly created WINDOW </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_display_8cpp_source.html#l00015">15</a> of file <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
 
@@ -260,7 +259,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>Displays state in specified line. </p>
+<p>Displays state at specified line. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">*state</td><td>Pointer to the state array to be displayed </td></tr>
@@ -270,6 +269,28 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_display_8cpp_source.html#l00067">67</a> of file <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3795a0063e6a8ca445c895c8753f53f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3795a0063e6a8ca445c895c8753f53f9">&#9670;&nbsp;</a></span>getAutomatonWinRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Display::getAutomatonWinRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns number of rows in main window. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of rows in main WINDOW </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_display_8cpp_source.html#l00062">62</a> of file <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +313,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Sets position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_position</td><td>Row to draw state at </td></tr>
+    <tr><td class="paramname">_position</td><td>Number of row to draw state at </td></tr>
   </table>
   </dd>
 </dl>
@@ -302,8 +323,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/butch/Dev/programming_projects/ncurses_Cellular_Automaton/source/<a class="el" href="_display_8hpp_source.html">Display.hpp</a></li>
-<li>/Users/butch/Dev/programming_projects/ncurses_Cellular_Automaton/source/<a class="el" href="_display_8cpp_source.html">Display.cpp</a></li>
+<li>/Users/butch/dev/programming_projects/ncurses_Cellular_Automaton/source/<a class="el" href="_display_8hpp_source.html">Display.hpp</a></li>
+<li>/Users/butch/dev/programming_projects/ncurses_Cellular_Automaton/source/<a class="el" href="_display_8cpp_source.html">Display.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

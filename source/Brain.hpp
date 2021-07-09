@@ -7,13 +7,13 @@
 /**
  * @brief Program logic handler
  *
- * The Brain handles program logic and coordinates the automaton model
- * as well as the user interface.
+ * The Brain class handles program logic and coordinates the automaton model
+ * as well as the user interface
  */
 class Brain {
 public:
    /**
-    * @brief Initialises member variables
+    * @brief Initialises member references to Automaton and Display
     */
     Brain(Automaton *_ca, Display *_disp);
 
