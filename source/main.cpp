@@ -1,7 +1,6 @@
 #include <ncurses.h>
 #include <unistd.h>
 #include <sstream>
-#include <string>
 #include "Automaton.hpp"
 #include "Display.hpp"
 #include "Brain.hpp"
@@ -45,12 +44,15 @@ int main (int argc, char *argv[]) {
 
     while (1)
         {
-            c = getch(); // Wait for key press before exiting the program
+            // Wait for key press before exiting the program
+            c = getch();
             switch (c)
                 {
+                    // End ncurses functionality
                     case 'q':
-                        endwin(); // End ncurses functionality
+                        endwin();
                         return 0;
+                    // Start/stop animation
                     case 's':
                         brain.runHalt();
                         break;

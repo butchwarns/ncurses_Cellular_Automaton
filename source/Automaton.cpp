@@ -1,6 +1,6 @@
 #include "Automaton.hpp"
 
-Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength), rule (_rule)
+Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength), rule (_rule), randomizeState (false)
     {
         // Allocate memory
         state = new bool [stateLength];
@@ -34,15 +34,40 @@ Automaton::~Automaton()
 
 void Automaton::init()
     {
-       // Initialise state with one living cell in the middle
-       for (int cell = 0; cell < stateLength; cell++)
+       if (!randomizeState)
            {
-               if (cell == stateLength / 2)
-                   state [cell] = true;
-               else
-                   state [cell] = false;
+               // Initialise state with one living cell in the middle
+               for (int cell = 0; cell < stateLength; cell++)
+                   {
+                       if (cell == stateLength / 2)
+                           state [cell] = true;
+                       else
+                           state [cell] = false;
+                   }
            }
+       else
+           {
+               // Seed uniformly distributed random number generation
+               std::random_device randDevice;
+               std::mt19937 mersenneTwister(randDevice());
+               std::uniform_real_distribution<double> distribution (1.0, 10.0);
 
+               // Initialise state with all random cells
+               for (int cell = 0; cell < stateLength; cell++)
+                   {
+                       // Generate random cell
+                       int randomValue = distribution (mersenneTwister);
+                       if (randomValue > 5)
+                           {
+                               state [cell] = true;
+                           }
+                       else {
+                           {
+                               state [cell] = false;
+                           }
+                       }
+                   }
+       }
        // Initialise rule bit representation
        calculateRuleBits();
     }

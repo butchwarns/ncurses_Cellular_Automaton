@@ -97,6 +97,11 @@ private:
     * @brief Current position in lines drawn on the screen
     */
     int position;
+
+   /**
+    * @brief History of states for scrolling animation
+    */
+    bool* canvas;
 };
 
 #endif // DISPLAY_H_

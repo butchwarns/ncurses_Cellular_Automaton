@@ -2,7 +2,8 @@
 #define AUTOMATON_H_
 
 #include <math.h>
-
+#include <random>
+#include <time.h>
 /**
  * @brief Cellular automaton data model
  *
@@ -105,6 +106,11 @@ private:
     * Bits are in reverse order, i.e., LSB at index zero.
     */
     bool *ruleBits;
+
+    /**
+     * @brief Initial state randomized
+     */
+    bool randomizeState;
 };
 
 #endif // AUTOMATON_H_
