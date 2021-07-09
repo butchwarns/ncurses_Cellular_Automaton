@@ -29,6 +29,12 @@ int main (int argc, char *argv[]) {
     if (argc > 1){
     std::stringstream convert (argv[1]);
     convert >> rule;
+
+    // If rule is out of bounds, default to 105
+    if (rule > 255)
+        {
+            rule = 105;
+        }
     }
 
     // Make Automaton with state size respecting window border
