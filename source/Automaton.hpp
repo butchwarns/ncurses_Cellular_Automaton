@@ -12,11 +12,11 @@ class Automaton {
 public:
     /**
      * @brief Allocate memory and initialise neighbourhood, state and
-     * rule arrays as all false
+     * rule arrays as all false and set initial rule
      *
      * @param _stateLength Memory allocated in number of cells in state array
      */
-    Automaton (int _stateLength);
+    Automaton (int _stateLength, int _rule);
 
     /**
      * @brief Free memory

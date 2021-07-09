@@ -70,7 +70,7 @@ void Display::displayState (bool *state, int pos)
         for (int cell = 0; cell < (automatonWinCols - 2); cell++)
             {
                 if (state [cell])
-                    mvwaddch (automatonWin, pos, cell + 1, ACS_DIAMOND);
+                    mvwaddch (automatonWin, pos, cell + 1, ACS_CKBOARD);
                 else
                     mvwaddch (automatonWin, pos, cell + 1, ' ');
             }

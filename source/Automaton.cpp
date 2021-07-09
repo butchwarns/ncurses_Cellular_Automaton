@@ -1,6 +1,6 @@
 #include "Automaton.hpp"
 
-Automaton::Automaton (int _stateLength) : stateLength (_stateLength), rule (105)
+Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength), rule (_rule)
     {
         // Allocate memory
         state = new bool [stateLength];

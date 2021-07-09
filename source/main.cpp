@@ -1,12 +1,14 @@
 #include <ncurses.h>
 #include <unistd.h>
+#include <sstream>
+#include <string>
 #include "Automaton.hpp"
 #include "Display.hpp"
 #include "Brain.hpp"
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main (int argc, char *argv[]) {
 
     initscr(); // Initialise ncurses
     cbreak(); // Enable C-c to break out of programm for dev purposes
@@ -14,16 +16,26 @@ int main(int argc, char *argv[]) {
     curs_set (0); // Hide the cursor
     nodelay (stdscr, true); // make getch() non-blocking for main loop
 
+    // Get terminal dimensions
     int maxY, maxX;
     getmaxyx (stdscr, maxY, maxX);
 
-    // Make display the size of screen
+    // Make main window the size of screen
     Display display (maxY, maxX);
 
-    // Automaton state size subtracts the box border
-    Automaton automaton (maxX - 2);
+    // Default rule
+    int rule = 105;
 
-    // Brain to handle the programm logic
+    // Convert command line argument
+    if (argc > 1){
+    std::stringstream convert (argv[1]);
+    convert >> rule;
+    }
+
+    // Make Automaton with state size respecting window border
+    Automaton automaton (maxX - 2, rule);
+
+    // Make Brain to handle the programm logic
     Brain brain (&automaton, &display);
 
     // Main loop
@@ -50,7 +62,6 @@ int main(int argc, char *argv[]) {
                     usleep (50000);
                 }
         }
-
 
     return 0;
 }
