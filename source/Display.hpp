@@ -77,6 +77,18 @@ public:
     */
     void displayRule (int rule, bool* ruleBits);
 
+   /**
+    * @brief Scrolls canvas up by one row, then adds new state
+    *
+    * @param state State to add to the canvas
+    */
+    void advanceCanvas (bool* state);
+
+   /**
+    * @brief Displays whole canvas
+    */
+    void displayCanvas();
+
 private:
    /**
     * @brief Main window to draw cellular automaton graphics
@@ -99,9 +111,14 @@ private:
     int position;
 
    /**
-    * @brief History of states for scrolling animation
+    * @brief History of states for scrolling animation, allocated on heap
     */
-    bool* canvas;
+    bool *canvas;
+
+   /**
+    * @brief History of states including next state used for animation
+    */
+    bool *nextCanvas;
 };
 
 #endif // DISPLAY_H_

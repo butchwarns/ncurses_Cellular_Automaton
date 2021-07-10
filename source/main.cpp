@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
     convert >> rule;
 
     // If rule is out of bounds, default to 105
-    if (rule > 255)
+    if (rule > 255 || rule < 0)
         {
             rule = 105;
         }
@@ -62,12 +62,14 @@ int main (int argc, char *argv[]) {
                     case 's':
                         brain.runHalt();
                         break;
+                    case 'n':
+                        brain.next();
                 }
 
             if (brain.isRunning())
                 {
                     brain.next();
-                    usleep (50000);
+                    usleep (80000);
                 }
         }
 

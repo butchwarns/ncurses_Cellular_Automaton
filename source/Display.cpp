@@ -4,7 +4,23 @@ Display::Display(int _automatonWinRows, int _automatonWinCols) :
     automatonWinRows (_automatonWinRows), automatonWinCols (_automatonWinCols),
     position (1)
     {
-       automatonWin = createWindow (automatonWinRows, automatonWinCols, 0, 0);
+
+        // Create new window
+        automatonWin = createWindow (automatonWinRows, automatonWinCols, 0, 0);
+
+        // Set canvas size to automatonWin size without border
+        int canvasCellNum = (_automatonWinRows - 2) * (_automatonWinCols - 2);
+
+        // Create canvases for scrolling animation
+        canvas = new bool [canvasCellNum];
+        nextCanvas = new bool [canvasCellNum];
+
+        // Initialise canvases as all false
+        for (int cell = 0; cell < canvasCellNum; cell++)
+            {
+                canvas [cell] = false;
+                nextCanvas [cell] = false;
+            }
     }
 
 Display::~Display()
@@ -96,5 +112,48 @@ void Display::displayRule (int rule, bool* ruleBits)
             }
         ruleBitStr.push_back (' ');
         waddstr (automatonWin, ruleBitStr.c_str());
+        wrefresh (automatonWin);
+    }
+
+void Display::advanceCanvas (bool *state)
+    {
+        int canvasRows = automatonWinRows - 2;
+        int canvasCols = automatonWinCols - 2;
+
+        // Shift all lines up by one dropping the oldest one
+        for (int row = 0; row < (canvasRows - 1); row++)
+            {
+                for (int cell = 0; cell < canvasCols; cell++)
+                    {
+                        nextCanvas [(row * canvasCols) + cell] = canvas [((row + 1) * canvasCols) + cell];
+                    }
+            }
+
+        // Add new state in last line of next canvas
+        for (int cell = 0; cell < canvasCols; cell++)
+            {
+                nextCanvas [((canvasRows - 1) * canvasCols) + cell] = state [cell];
+            }
+
+        // Pointer swap to reuse memory
+        bool* temp = canvas;
+        canvas = nextCanvas;
+        nextCanvas = temp;
+    }
+
+void Display::displayCanvas()
+    {
+        // For each row
+        for (int row = 0; row < automatonWinRows - 2; row++)
+            {
+                // Iterate over cells and print the living ones
+                for (int cell = 0; cell < (automatonWinCols - 2); cell++)
+                    {
+                        if (canvas [row * (automatonWinCols - 2) + cell])
+                            mvwaddch (automatonWin, row + 1, cell + 1, ACS_CKBOARD);
+                        else
+                            mvwaddch (automatonWin, row + 1, cell + 1, ' ');
+                    }
+            }
         wrefresh (automatonWin);
     }

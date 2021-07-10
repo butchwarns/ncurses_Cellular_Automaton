@@ -37,8 +37,19 @@ bool Brain::isRunning()
 
 void Brain::next()
     {
-        // Display current state
-        disp->displayState (ca->getState(), disp->getPosition());
+        // If last line is passed, go back to first line
+        if (disp->getPosition() >= disp->getAutomatonWinRows() - 1)
+            {
+               // disp->reset();
+               // disp->displayRule (ca->getRule(), ca->getRuleBits());
+
+               disp->displayCanvas();
+            }
+        else
+            {
+                // Display current state
+                disp->displayState (ca->getState(), disp->getPosition());
+            }
 
         // Advance Automaton state
         ca->advanceState();
@@ -46,10 +57,6 @@ void Brain::next()
         // Move one line down
         disp->advancePosition();
 
-        // If last line is passed, go back to first line
-        if (disp->getPosition() == disp->getAutomatonWinRows() - 1)
-            {
-               disp->reset();
-               disp->displayRule (ca->getRule(), ca->getRuleBits());
-            }
+        // Add next state to canvas
+        disp->advanceCanvas (ca->getState());
     }
