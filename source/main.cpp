@@ -58,6 +58,7 @@ int main (int argc, char *argv[]) {
     // Make Brain to handle the programm logic
     Brain brain (&automaton, &display);
 
+
     // Main loop
     char c = ' ';
 
@@ -70,6 +71,7 @@ int main (int argc, char *argv[]) {
             switch (c)
                 {
                     // End ncurses functionality
+                    // and quit program
                     case 'q':
                         endwin();
                         return 0;
@@ -77,13 +79,17 @@ int main (int argc, char *argv[]) {
                     case 's':
                         brain.runHalt();
                         break;
+                    // Advance state
                     case 'n':
                         brain.next();
                 }
 
             if (brain.isRunning())
                 {
+                    // Advance state and display
                     brain.next();
+
+                    // Wait for nicer animation
                     usleep (80000);
                 }
         }

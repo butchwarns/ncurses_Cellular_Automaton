@@ -24,6 +24,7 @@ Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength),
             }
     }
 
+
 Automaton::~Automaton()
     {
         // Free allocated memory
@@ -31,6 +32,7 @@ Automaton::~Automaton()
         delete nextState;
         delete neighbourhoodBits;
     }
+
 
 void Automaton::init()
     {
@@ -68,9 +70,11 @@ void Automaton::init()
                        }
                    }
        }
+
        // Initialise rule bit representation
        calculateRuleBits();
     }
+
 
 void Automaton::reset()
     {
@@ -82,16 +86,20 @@ void Automaton::reset()
             }
     }
 
+
 void Automaton::setRule (int _rule)
     {
+        // Set rule and calculate bit representation
         rule = _rule;
         calculateRuleBits();
     }
+
 
 int Automaton::getRule()
     {
         return rule;
     }
+
 
 void Automaton::calculateRuleBits()
     {
@@ -108,10 +116,12 @@ void Automaton::calculateRuleBits()
             }
     }
 
+
 bool* Automaton::getRuleBits()
     {
         return ruleBits;
     }
+
 
 void Automaton::advanceState()
     {
@@ -161,12 +171,14 @@ void Automaton::advanceState()
                     }
 
             }
+
         // Next state becomes current state
         // Pointer swap reuses allocated memory
         bool* temp = state;
         state = nextState;
         nextState = temp;
     }
+
 
 bool* Automaton::getState()
     {

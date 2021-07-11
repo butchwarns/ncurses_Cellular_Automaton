@@ -7,6 +7,7 @@ Brain::Brain(Automaton *_ca, Display *_disp) : ca (_ca), disp (_disp), running (
 
 Brain::~Brain(){}
 
+
 void Brain::init()
     {
         // Initialise automaton
@@ -19,10 +20,12 @@ void Brain::init()
         next();
     }
 
+
 void Brain::reset()
     {
 
     }
+
 
 void Brain::runHalt()
     {
@@ -30,10 +33,12 @@ void Brain::runHalt()
         running = !running;
     }
 
+
 bool Brain::isRunning()
     {
         return running;
     }
+
 
 void Brain::next()
     {

@@ -23,10 +23,12 @@ Display::Display(int _automatonWinRows, int _automatonWinCols) :
             }
     }
 
+
 Display::~Display()
     {
         delwin (automatonWin);
     }
+
 
 WINDOW* Display::createWindow (int rows, int cols, int winY, int winX)
     {
@@ -45,6 +47,7 @@ WINDOW* Display::createWindow (int rows, int cols, int winY, int winX)
         return window;
     }
 
+
 void Display::reset()
     {
         //Clear screen
@@ -60,25 +63,30 @@ void Display::reset()
         position = 1;
     }
 
+
 void Display::advancePosition()
     {
         position += 1;
     }
+
 
 void Display::setPosition (int _position)
     {
         position = _position;
     }
 
+
 int Display::getPosition()
     {
         return position;
     }
 
+
 int Display::getAutomatonWinRows()
     {
         return automatonWinRows;
     }
+
 
 void Display::displayState (bool *state, int pos)
     {
@@ -93,6 +101,7 @@ void Display::displayState (bool *state, int pos)
 
         wrefresh (automatonWin);
     }
+
 
 void Display::displayRule (int rule, bool* ruleBits)
     {
@@ -114,6 +123,7 @@ void Display::displayRule (int rule, bool* ruleBits)
         waddstr (automatonWin, ruleBitStr.c_str());
         wrefresh (automatonWin);
     }
+
 
 void Display::advanceCanvas (bool *state)
     {
@@ -140,6 +150,7 @@ void Display::advanceCanvas (bool *state)
         canvas = nextCanvas;
         nextCanvas = temp;
     }
+
 
 void Display::displayCanvas()
     {
