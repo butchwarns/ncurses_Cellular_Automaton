@@ -1,6 +1,7 @@
 #include <ncurses.h>
 #include <unistd.h>
 #include <sstream>
+#include <random>
 #include "Automaton.hpp"
 #include "Display.hpp"
 #include "Brain.hpp"
@@ -22,20 +23,34 @@ int main (int argc, char *argv[]) {
     // Make main window the size of screen
     Display display (maxY, maxX);
 
-    // Default rule
-    int rule = 105;
+
+    // Rule to apply
+    int rule = 0;
+
+    // Seed uniformly distributed rng for random rule
+    std::random_device randDevice;
+    std::mt19937 mersenneTwister(randDevice());
+    std::uniform_real_distribution<double> distribution (0.0, 255.0);
 
     // Convert command line argument
-    if (argc > 1){
-    std::stringstream convert (argv[1]);
-    convert >> rule;
-
-    // If rule is out of bounds, default to 105
-    if (rule > 255 || rule < 0)
+    if (argc > 1)
         {
-            rule = 105;
+            std::stringstream convert (argv[1]);
+            convert >> rule;
+
+            // If rule is out of bounds, default to 105
+            if (rule > 255 || rule < 0)
+                {
+                    // Generate random rule
+                    rule = distribution (mersenneTwister);
+                }
         }
-    }
+    else
+        {
+            // Generate random rule
+            rule = distribution (mersenneTwister);
+        }
+
 
     // Make Automaton with state size respecting window border
     Automaton automaton (maxX - 2, rule);
