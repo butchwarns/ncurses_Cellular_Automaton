@@ -23,7 +23,9 @@ void Brain::init()
 
 void Brain::reset()
     {
-
+        // Reset automaton and display
+        ca->reset();
+        disp->reset();
     }
 
 
@@ -64,4 +66,32 @@ void Brain::next()
 
         // Add next state to canvas
         disp->advanceCanvas (ca->getState());
+    }
+
+
+void Brain::restartRandomized()
+    {
+        // Reset automaton and display
+        // reset();
+
+        // Init again
+        // init()
+
+        // Set random rule
+        randomize();
+
+        // Display new rule
+        disp->displayRule(ca->getRule(), ca->getRuleBits());
+    }
+
+
+void Brain::randomize()
+    {
+        // Seed uniformly distributed rng for random rule
+        std::random_device randDevice;
+        std::mt19937 mersenneTwister(randDevice());
+        std::uniform_real_distribution<double> distribution (0.0, 255.0);
+
+        int randomRule = distribution (mersenneTwister);
+        ca->setRule (randomRule);
     }

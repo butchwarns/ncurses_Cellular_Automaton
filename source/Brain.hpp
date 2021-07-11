@@ -65,6 +65,18 @@ public:
     void next();
 
 
+   /**
+    * @brief Resets automaton and display, then starts over with a random rule
+    */
+
+    void restartRandomized();
+
+   /**
+    * @brief Set new random rule
+    */
+
+    void randomize();
+
 private:
    /**
     * @brief Reference to automaton model class

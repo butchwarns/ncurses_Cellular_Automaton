@@ -82,6 +82,10 @@ int main (int argc, char *argv[]) {
                     // Advance state
                     case 'n':
                         brain.next();
+                        break;
+                    case 'r':
+                        brain.restartRandomized();
+                        break;
                 }
 
             if (brain.isRunning())
