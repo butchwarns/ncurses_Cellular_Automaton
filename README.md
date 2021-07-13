@@ -21,7 +21,7 @@ Functional work in progress. I do intend to add more features in the future.
 The ncurses library, wrapped in C++, is used to render all graphics on the terminal.
 
 ## Features
-The **ncurses-CellularAutomaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepped operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running, so you can use the output of one rule and apply a different one. This gives some interesting sequences (if you're lucky). 
+The **ncurses-Cellular-Automaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepped operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running, so you can use the output of one rule and apply a different one. This gives some interesting sequences (if you're lucky). 
 
 ## Installation
 The project is built using CMake and is therefore easily compiled on most operating systems.
