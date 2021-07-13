@@ -24,7 +24,7 @@ SOFTWARE.
 
 #include "Automaton.hpp"
 
-Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength), rule (_rule), randomizeState (false)
+Automaton::Automaton (int _stateLength, int _rule) : stateLength (_stateLength), rule (_rule), stateRandomized (false)
     {
         // Allocate memory
         state = new bool [stateLength];
@@ -60,7 +60,7 @@ Automaton::~Automaton()
 
 void Automaton::init()
     {
-       if (!randomizeState)
+       if (!stateRandomized)
            {
                // Initialise state with one living cell in the middle
                for (int cell = 0; cell < stateLength; cell++)
@@ -207,4 +207,14 @@ void Automaton::advanceState()
 bool* Automaton::getState()
     {
         return state;
+    }
+
+void Automaton::setStateRandomized (bool _stateRandomized)
+    {
+       stateRandomized = _stateRandomized;
+    }
+
+bool Automaton::getStateRandomized()
+    {
+       return stateRandomized;
     }

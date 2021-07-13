@@ -119,3 +119,9 @@ void Brain::randomize()
         int randomRule = distribution (mersenneTwister);
         ca->setRule (randomRule);
     }
+
+
+void Brain::toggleRandomizeState()
+   {
+       ca->setStateRandomized (!ca->getStateRandomized());
+   }

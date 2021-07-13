@@ -109,6 +109,23 @@ public:
 
     bool* getState();
 
+
+   /**
+    * @brief Set whether state should be randomized on initialisation
+    *
+    * @param _stateRandomized Bool on whether inital conditions are arandomized
+    */
+
+    void setStateRandomized (bool _stateRandomized);
+
+   /**
+    * @brief Get whether initial state is randomized
+    *
+    * @return Bool indicating whether initial states are randomized
+    */
+
+    bool getStateRandomized();
+
 private:
    /**
     * @brief Allocated state memory in number of cells
@@ -141,6 +158,12 @@ private:
     int rule;
 
    /**
+    * @brief Bool saying whether the state should be randomized on initialization
+    */
+
+    bool stateRandomized;
+
+   /**
     * @brief Pointer to heap allocated rule binary representation
     *
     * Array of bools representing bits of the current rule.
@@ -148,12 +171,6 @@ private:
     */
 
     bool *ruleBits;
-
-    /**
-     * @brief Initial state randomized
-     */
-
-    bool randomizeState;
 };
 
 #endif // AUTOMATON_H_

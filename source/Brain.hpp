@@ -101,6 +101,12 @@ public:
 
     void randomize();
 
+   /**
+    * @brief Toggle the randomization of initial conditions
+    */
+
+    void toggleRandomizeState();
+
 private:
    /**
     * @brief Reference to automaton model class
