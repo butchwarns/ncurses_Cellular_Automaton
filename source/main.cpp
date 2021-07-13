@@ -110,6 +110,10 @@ int main (int argc, char *argv[]) {
                     case 'r':
                         brain.restartRandomized();
                         break;
+                    case 'x':
+                        brain.reset();
+                        brain.init();
+                        break;
                 }
 
             if (brain.isRunning())
