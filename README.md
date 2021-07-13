@@ -3,11 +3,13 @@ An elementary cellular automaton with a text-based user interface for your termi
 
 ## Motivation
 This project is my attempt at making rule 30, a cellular automaton introduced by Stephen Wolfram in 1983, somewhat more easily explorable for the interested.
-The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works.
-I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
+The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time. I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
+
+## A word of caution
+The animation can flicker quite a bit at times, so please take care if you are sensitive to those kind of things!
 
 ## Project status
-Functional work in progress.
+Functional work in progress. I do intend to add more features in the future.
 
 ## Code style
 [![js-standard-style](https://img.shields.io/badge/code%20style-stroustrup-brightgreen.svg?style=flat)](https://www.stroustrup.com/bs_faq2.html#layout-style)
@@ -36,9 +38,8 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
   - On Windows the configuration and build scripts need to be updated to create a VSCode project or similar.
   - **TODO** *add installation isntructions for Windows users.*
  
- 
 **Linux:**
-  - You know what to do
+  - You know what to do :)
 
 ## Documentation
 **TODO** *add link to documentation*
@@ -50,9 +51,9 @@ After that, the following keybindings control the software:
 - `S` Run / halt the animation
 - `N` Advance to next state
 - `R` Randomize Rule
-- `Q` Quit program
 - `X` Reset to initial state
 - `I` Toggle randomization of inital conditions
+- `Q` Quit program
 
 **TODO** *improve usage instructions*
 
