@@ -51,6 +51,8 @@ After that, the following keybindings control the software:
 - `N` Advance to next state
 - `R` Randomize Rule
 - `Q` Quit program
+- `X` Reset to initial state
+- `I` Toggle randomization of inital conditions
 
 **TODO** *improve usage instructions*
 
