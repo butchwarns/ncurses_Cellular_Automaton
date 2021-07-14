@@ -74,6 +74,17 @@ public:
     void reset();
 
 
+    /**
+     * @brief Draw the UI elements on the side of the frame
+     *
+     * @param rule Current Rule
+     * @param ruleBits Bit representation of rule
+     * @param seedRandomized
+     */
+
+     void displayGUI (int rule, bool* ruleBits, bool seedRandomized);
+
+
    /**
     * @brief Advances position by one line
     */
@@ -120,6 +131,13 @@ public:
     */
 
     void displayRule (int rule, bool* ruleBits);
+
+
+   /**
+    * @brief Show seed randomization flag
+    */
+
+    void displaySeedRandomized (bool seedRandomized);
 
 
    /**

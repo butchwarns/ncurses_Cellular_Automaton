@@ -78,9 +78,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abebedc147ed20a796b726fc7e7b8252c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#abebedc147ed20a796b726fc7e7b8252c">Automaton</a> (int _stateLength)</td></tr>
-<tr class="memdesc:abebedc147ed20a796b726fc7e7b8252c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory and initialise neighbourhood, state and rule arrays as all false.  <a href="class_automaton.html#abebedc147ed20a796b726fc7e7b8252c">More...</a><br /></td></tr>
-<tr class="separator:abebedc147ed20a796b726fc7e7b8252c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a2836b4d338d7fa333874297eec948"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#a36a2836b4d338d7fa333874297eec948">Automaton</a> (int _stateLength, int _rule)</td></tr>
+<tr class="memdesc:a36a2836b4d338d7fa333874297eec948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory and initialise neighbourhood, state and rule arrays as all false and set initial rule.  <a href="class_automaton.html#a36a2836b4d338d7fa333874297eec948">More...</a><br /></td></tr>
+<tr class="separator:a36a2836b4d338d7fa333874297eec948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1a1748477b89739ba8369074940f803"><td class="memItemLeft" align="right" valign="top"><a id="ae1a1748477b89739ba8369074940f803"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#ae1a1748477b89739ba8369074940f803">~Automaton</a> ()</td></tr>
 <tr class="memdesc:ae1a1748477b89739ba8369074940f803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory. <br /></td></tr>
@@ -113,6 +113,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a511d857bba331016e3a7612532e5824c"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#a511d857bba331016e3a7612532e5824c">getState</a> ()</td></tr>
 <tr class="memdesc:a511d857bba331016e3a7612532e5824c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to current automaton state.  <a href="class_automaton.html#a511d857bba331016e3a7612532e5824c">More...</a><br /></td></tr>
 <tr class="separator:a511d857bba331016e3a7612532e5824c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f111e5dd8b3d42a241000a128a38b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#a31f111e5dd8b3d42a241000a128a38b6">setStateRandomized</a> (bool _stateRandomized)</td></tr>
+<tr class="memdesc:a31f111e5dd8b3d42a241000a128a38b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether state should be randomized on initialisation.  <a href="class_automaton.html#a31f111e5dd8b3d42a241000a128a38b6">More...</a><br /></td></tr>
+<tr class="separator:a31f111e5dd8b3d42a241000a128a38b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646a8598dda43824d0643bc35386306f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#a646a8598dda43824d0643bc35386306f">getStateRandomized</a> ()</td></tr>
+<tr class="memdesc:a646a8598dda43824d0643bc35386306f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether initial state is randomized.  <a href="class_automaton.html#a646a8598dda43824d0643bc35386306f">More...</a><br /></td></tr>
+<tr class="separator:a646a8598dda43824d0643bc35386306f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -136,6 +142,10 @@ bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#a751911fd443aacd6e58b8b019d9fbfb6">rule</a></td></tr>
 <tr class="memdesc:a751911fd443aacd6e58b8b019d9fbfb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rule to apply. <br /></td></tr>
 <tr class="separator:a751911fd443aacd6e58b8b019d9fbfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab493a3021dc1689444822f83eb9e08e1"><td class="memItemLeft" align="right" valign="top"><a id="ab493a3021dc1689444822f83eb9e08e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#ab493a3021dc1689444822f83eb9e08e1">stateRandomized</a></td></tr>
+<tr class="memdesc:ab493a3021dc1689444822f83eb9e08e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool saying whether the state should be randomized on initialization. <br /></td></tr>
+<tr class="separator:ab493a3021dc1689444822f83eb9e08e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbd5974e5ffd30beaa5a2b31c82c7983"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automaton.html#abbd5974e5ffd30beaa5a2b31c82c7983">ruleBits</a></td></tr>
 <tr class="memdesc:abbd5974e5ffd30beaa5a2b31c82c7983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to heap allocated rule binary representation.  <a href="class_automaton.html#abbd5974e5ffd30beaa5a2b31c82c7983">More...</a><br /></td></tr>
 <tr class="separator:abbd5974e5ffd30beaa5a2b31c82c7983"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,10 +154,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <div class="textblock"><p>Cellular automaton data model. </p>
 <p>Represents the inner workings of the elementary cellular automaton. </p>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8hpp_source.html#l00011">11</a> of file <a class="el" href="_automaton_8hpp_source.html">Automaton.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8hpp_source.html#l00038">38</a> of file <a class="el" href="_automaton_8hpp_source.html">Automaton.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abebedc147ed20a796b726fc7e7b8252c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abebedc147ed20a796b726fc7e7b8252c">&#9670;&nbsp;</a></span>Automaton()</h2>
+<a id="a36a2836b4d338d7fa333874297eec948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a2836b4d338d7fa333874297eec948">&#9670;&nbsp;</a></span>Automaton()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,13 +166,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
           <td class="memname">Automaton::Automaton </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_stateLength</em></td><td>)</td>
+          <td class="paramname"><em>_stateLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_rule</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocate memory and initialise neighbourhood, state and rule arrays as all false. </p>
+<p>Allocate memory and initialise neighbourhood, state and rule arrays as all false and set initial rule. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_stateLength</td><td>Memory allocated in number of cells in state array </td></tr>
@@ -170,7 +190,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00003">3</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00027">27</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
 
 </div>
 </div>
@@ -193,7 +213,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Determine bit representation of rule and store it. </p>
 <p>Binary representation of current rule is calculated and stored in heap allocated member array. </p>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00071">71</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00128">128</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
 
 </div>
 </div>
@@ -215,7 +235,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Returns rule bits array. </p>
 <dl class="section return"><dt>Returns</dt><dd>array of rule bits </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00086">86</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00144">144</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +257,29 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Return pointer to current automaton state. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to heap allocated current state array </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00146">146</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00207">207</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a646a8598dda43824d0643bc35386306f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646a8598dda43824d0643bc35386306f">&#9670;&nbsp;</a></span>getStateRandomized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Automaton::getStateRandomized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether initial state is randomized. </p>
+<dl class="section return"><dt>Returns</dt><dd>Bool indicating whether initial states are randomized </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00217">217</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +307,35 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00060">60</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00114">114</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a31f111e5dd8b3d42a241000a128a38b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f111e5dd8b3d42a241000a128a38b6">&#9670;&nbsp;</a></span>setStateRandomized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Automaton::setStateRandomized </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_stateRandomized</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether state should be randomized on initialisation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_stateRandomized</td><td>Bool on whether inital conditions are arandomized </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_automaton_8cpp_source.html#l00212">212</a> of file <a class="el" href="_automaton_8cpp_source.html">Automaton.cpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +363,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Pointer to heap allocated rule binary representation. </p>
 <p>Array of bools representing bits of the current rule. Bits are in reverse order, i.e., LSB at index zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="_automaton_8hpp_source.html#l00107">107</a> of file <a class="el" href="_automaton_8hpp_source.html">Automaton.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_automaton_8hpp_source.html#l00173">173</a> of file <a class="el" href="_automaton_8hpp_source.html">Automaton.hpp</a>.</p>
 
 </div>
 </div>

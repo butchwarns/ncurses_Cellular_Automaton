@@ -40,6 +40,9 @@ void Brain::init()
         // Display the rule and its bit representation
         disp->displayRule (ca->getRule(), ca->getRuleBits());
 
+        // Display whether seed is randomized
+        disp->displaySeedRandomized (ca->getStateRandomized());
+
         // Display seed
         next();
     }
@@ -70,7 +73,7 @@ void Brain::next()
     {
         // If last line is passed, go back to first line
         if (disp->getPosition() >= disp->getAutomatonWinRows() - 1)
-            {
+           {
                // disp->reset();
                // disp->displayRule (ca->getRule(), ca->getRuleBits());
 
@@ -124,4 +127,7 @@ void Brain::randomize()
 void Brain::toggleRandomizeState()
    {
        ca->setStateRandomized (!ca->getStateRandomized());
+
+       // Display change on GUI
+       disp->displayGUI (ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
    }

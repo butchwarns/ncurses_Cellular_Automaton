@@ -88,6 +88,13 @@ void Display::reset()
     }
 
 
+void Display::displayGUI (int rule, bool* ruleBits, bool seedRandomized)
+    {
+       displayRule (rule, ruleBits);
+       displaySeedRandomized (seedRandomized);
+    }
+
+
 void Display::advancePosition()
     {
         position += 1;
@@ -130,7 +137,7 @@ void Display::displayState (bool *state, int pos)
 void Display::displayRule (int rule, bool* ruleBits)
     {
         // Print rule in top left corner
-        std::string ruleStr = "Rule: " + std::to_string(rule);
+        std::string ruleStr = "Rule: " + std::to_string (rule);
         mvwaddstr (automatonWin, 0, 0, ruleStr.c_str());
         wrefresh (automatonWin);
 
@@ -145,6 +152,30 @@ void Display::displayRule (int rule, bool* ruleBits)
             }
         ruleBitStr.push_back (' ');
         waddstr (automatonWin, ruleBitStr.c_str());
+        wrefresh (automatonWin);
+    }
+
+
+
+void Display::displaySeedRandomized (bool seedRandomized)
+    {
+        // Create string
+        std::string yesNo = seedRandomized ? "YES" : "NO";
+        std::string seedRandomizedStr = "";
+
+        if (seedRandomized)
+            {
+                seedRandomizedStr = " Seed Randomized: " + yesNo;
+            }
+        else
+            {
+                seedRandomizedStr = " Seed Randomized: " + yesNo;
+            }
+
+        // Print in top right corner
+        int topRight = automatonWinCols - seedRandomizedStr.length();
+
+        mvwaddstr (automatonWin, 0, topRight, seedRandomizedStr.c_str());
         wrefresh (automatonWin);
     }
 
