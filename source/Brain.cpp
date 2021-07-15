@@ -130,4 +130,18 @@ void Brain::toggleRandomizeState()
 
        // Display change on GUI
        disp->displayGUI (ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
+
+       // If not running and on starting position..
+       if (!isRunning() && disp->getPosition() == 2)
+           {
+               reset();
+               init();
+           }
    }
+
+
+void Brain::setRule ()
+    {
+        ca->setRule (disp->enterRule());
+        disp->displayGUI (ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
+    }

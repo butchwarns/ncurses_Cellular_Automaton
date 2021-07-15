@@ -136,8 +136,12 @@ void Display::displayState (bool *state, int pos)
 
 void Display::displayRule (int rule, bool* ruleBits)
     {
+        // Pad rule number with leading zeros
+        std::stringstream strstr;
+        strstr << std::setw(3) << std::setfill('0') << rule;
+
         // Print rule in top left corner
-        std::string ruleStr = "Rule: " + std::to_string (rule);
+        std::string ruleStr = "Rule: " + strstr.str();
         mvwaddstr (automatonWin, 0, 0, ruleStr.c_str());
         wrefresh (automatonWin);
 
@@ -222,4 +226,44 @@ void Display::displayCanvas()
                     }
             }
         wrefresh (automatonWin);
+    }
+
+
+int Display::enterRule()
+    {
+        std::string enterStr = "Enter Rule:         ";
+
+        // Print message in top left corner
+        mvwaddstr (automatonWin, 0, 0, enterStr.c_str());
+
+        // Show the cursor and echo key presses
+        curs_set (1);
+        echo();
+        wrefresh (automatonWin);
+
+        // Have user enter the rule
+        wmove(automatonWin, 0, 12);
+
+        char numberStr [3];
+        wgetnstr (automatonWin, numberStr, 3);
+
+        // Convert to int
+        std::stringstream strstr (numberStr);
+
+        int rule = 0;
+        strstr >> rule;
+
+        // Hide cursor again and don't echo key presses
+        curs_set (0);
+        noecho();
+        wrefresh (automatonWin);
+
+        if (rule >= 0 && rule <= 255)
+            {
+                return rule;
+            }
+        else
+            {
+                return 0;
+            }
     }

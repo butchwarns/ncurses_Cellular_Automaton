@@ -107,6 +107,12 @@ public:
 
     void toggleRandomizeState();
 
+
+   /**
+    * @brief Enter new rule
+    */
+    void setRule ();
+
 private:
    /**
     * @brief Reference to automaton model class

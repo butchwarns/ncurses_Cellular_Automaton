@@ -117,6 +117,12 @@ int main (int argc, char *argv[]) {
                     case 'i':
                         brain.toggleRandomizeState();
                         break;
+                    case 't':
+                        if (!brain.isRunning())
+                            {
+                                brain.setRule();
+                            }
+                        break;
                 }
 
             if (brain.isRunning())

@@ -27,6 +27,8 @@ SOFTWARE.
 
 #include <ncurses.h>
 #include <string>
+#include <sstream>
+#include <iomanip>
 
 /**
  * @brief Text-based user interface
@@ -155,6 +157,14 @@ public:
 
     void displayCanvas();
 
+
+   /**
+    * @brief Enter new rule
+    *
+    * @return Rule entered by the user
+    */
+
+    int enterRule();
 
 private:
    /**
