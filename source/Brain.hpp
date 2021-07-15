@@ -111,6 +111,7 @@ public:
    /**
     * @brief Enter new rule
     */
+
     void setRule ();
 
 private:

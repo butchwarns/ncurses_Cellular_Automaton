@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['neighbourhoodbits_27',['neighbourhoodBits',['../class_automaton.html#ab2d83f90e5c6aefbb01a14ba72ad2382',1,'Automaton']]],
-  ['next_28',['next',['../class_brain.html#ab49f50d30d7ea2491005af167cc7a7a0',1,'Brain']]],
-  ['nextcanvas_29',['nextCanvas',['../class_display.html#ad9aebf6041e83379b8d2185349b85789',1,'Display']]],
-  ['nextstate_30',['nextState',['../class_automaton.html#a4375f39ef314c4bb252113dca777dac2',1,'Automaton']]]
+  ['init_26',['init',['../class_automaton.html#a19513e4e99076d4d4ad653f16fb928d1',1,'Automaton::init()'],['../class_brain.html#a2037d9296b3f0f73205e21b0dfbf20e7',1,'Brain::init()']]],
+  ['isrunning_27',['isRunning',['../class_brain.html#ae043ada99f1e6c17ca6fdb011506d5c0',1,'Brain']]]
 ];
