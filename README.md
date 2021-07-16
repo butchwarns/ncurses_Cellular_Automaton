@@ -21,7 +21,7 @@ Functional work in progress. I do intend to add more features in the future.
 The ncurses library, wrapped in C++, is used to render all graphics on the terminal.
 
 ## Features
-The **ncurses-Cellular-Automaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepped operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running, so you can use the output of one rule and apply a different one. This gives some interesting sequences (if you're lucky). 
+The **ncurses-Cellular-Automaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepwise operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running. You can always use the output of one rule and apply a different one to it. This gives some interesting sequences (if you're lucky). 
 
 ## Installation
 The project is built using CMake and is therefore easily compiled on most operating systems.
@@ -35,7 +35,7 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
   2. Run `build.sh` to compile the program
 
 **Windows:**
-  - On Windows the configuration and build scripts need to be updated to create a VSCode project or similar.
+  - On Windows the configuration and build scripts can to be updated to create a VSCode project or similar.
   - **TODO** *add installation isntructions for Windows users.*
  
 **Linux:**
@@ -50,7 +50,8 @@ After that, the following keybindings control the software:
 
 - `S` Run / halt the animation
 - `N` Advance to next state
-- `R` Randomize Rule
+- `T` Enter rule (0-255)
+- `R` New random rule
 - `X` Reset to initial state
 - `I` Toggle randomization of inital conditions
 - `Q` Quit program
