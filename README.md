@@ -46,9 +46,6 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
 **Linux:**
   - You know what to do :)
 
-## Documentation
-**TODO** *add link to documentation*
-
 ## How to use?
 Just pass a rule to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. 
 
@@ -66,8 +63,10 @@ The idea is to just try some things and see what the automaton comes up with. So
 
 After randomizing the rule it can sometimes happen, that the automaton goes to a state of all black or white cells. If this occurs, you have to restart by pressing `X` to get back to other patterns again.
 
-## License
+## Documentation
+Documentation files are not hosted currently, but they are included in the project files. Open _/documentation/html/index.html_ in your browser to access the documentation in case you want an easier time understanding the code.
 
+## License
 The **ncurses-Cellular-Automaton** project is released under the MIT license.
 
 Copyright © 2021 Butch Warns
