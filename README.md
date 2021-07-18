@@ -2,8 +2,9 @@
 An elementary cellular automaton with a text-based user interface for your terminal.  
 
 ## Motivation
-This project is my attempt at making rule 30, a cellular automaton introduced by Stephen Wolfram in 1983, somewhat more easily explorable for the interested.
+This project is my attempt at making "Rule 30", a cellular automaton introduced by Stephen Wolfram in 1983, somewhat more easily explorable for the interested.
 The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time.  
+
 I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
 
 ## A word of caution
@@ -52,7 +53,7 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
 Just pass a rule to `rule.sh` (or the executable) to initialise the automaton.  
 After that, the following keybindings control the software:
 
-- `S` Run / halt the animation
+- `S` Run/halt the animation
 - `N` Advance to next state
 - `T` Enter rule (0-255)
 - `R` New random rule
@@ -60,7 +61,9 @@ After that, the following keybindings control the software:
 - `I` Toggle randomization of inital conditions
 - `Q` Quit program
 
-**TODO** *improve usage instructions*
+The idea is to just try some things and see what the automaton comes up with. Sometimes it gives pretty suprising results, so don't hesitate to press `R` a couple of times while the animation is running. (If you do so starting from a single cell, you can get some cool rocket-like pixel spaceships.)
+
+After randomizing the rule it can sometimes happen, that the automaton goes to a state of all black or white cells. If this occurs, you have to restart by pressing `X` to get back to other patterns again.
 
 ## License
 
