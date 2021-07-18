@@ -50,8 +50,9 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
 **TODO** *add link to documentation*
 
 ## How to use?
-Just pass a rule to `rule.sh` (or the executable) to initialise the automaton.  
-After that, the following keybindings control the software:
+Just pass a rule to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. 
+
+The following keybindings control the software:
 
 - `S` Run/halt the animation
 - `N` Advance to next state
