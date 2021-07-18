@@ -3,7 +3,8 @@ An elementary cellular automaton with a text-based user interface for your termi
 
 ## Motivation
 This project is my attempt at making rule 30, a cellular automaton introduced by Stephen Wolfram in 1983, somewhat more easily explorable for the interested.
-The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time. I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
+The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time.  
+I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
 
 ## A word of caution
 The animation can flicker quite a bit at times, so please take care if you are sensitive to those kind of things!
@@ -15,7 +16,10 @@ Functional work in progress. I do intend to add more features in the future.
 [![js-standard-style](https://img.shields.io/badge/code%20style-stroustrup-brightgreen.svg?style=flat)](https://www.stroustrup.com/bs_faq2.html#layout-style)
  
 ## Screenshots
-**TODO** *Include logo/demo screenshot etc.*
+![Rule 18 starting from a single cell](/images/rule_18_single_cell.png?raw=true "Rule 18 starting from a single cell")
+![Rule 73 starting from random cells](/images/rule_73_random_cells.png?raw=true "Rule 73 starting from random cells")
+![Rule 105 starting from a single cell](/images/rule_105_single_cell.png?raw=true "Rule 105 starting from a single cell")
+![Rule 126 starting from random cells](/images/rule_126_random_cells.png?raw=true "Rule 126 starting from random cells")
 
 ## Tech/framework used
 The ncurses library, wrapped in C++, is used to render all graphics on the terminal.
