@@ -24,6 +24,7 @@ Functional work in progress. I do intend to add more features in the future.
 
 ## Tech/framework used
 The ncurses library, wrapped in C++, is used to render all graphics on the terminal.
+(It needs to be installed on your system in order to compile the program! Simply consult homebrew or the package manager of your choice..)
 
 ## Features
 The **ncurses-Cellular-Automaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepwise operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running. You can always use the output of one rule and apply a different one to it. This gives some interesting sequences (if you're lucky). 
@@ -38,16 +39,15 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
 **MacOS:**
   1. `git clone` the repository
   2. Run `build.sh` to compile the program
-
-**Windows:**
-  - On Windows the configuration and build scripts can to be updated to create a VSCode project or similar.
-  - **TODO** *add installation isntructions for Windows users.*
  
 **Linux:**
   - You know what to do :)
+ 
+ **Windows:**
+ Unfortunately, the ncurses library is only available to UNIX-like operating systems.
 
 ## How to use?
-Just pass a rule to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. 
+Just pass a rule to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. A hacky way to add more "pixels" (cells = characters) is decreasing the font size of your terminal, though the interface can become hard to read, if you go too far. Resizing the window or font needs to be done before the program is started.
 
 The following keybindings control the software:
 
@@ -59,7 +59,7 @@ The following keybindings control the software:
 - `I` Toggle randomization of inital conditions
 - `Q` Quit program
 
-The idea is to just try some things and see what the automaton comes up with. Sometimes it gives pretty suprising results, so don't hesitate to press `R` a couple of times while the animation is running. (If you do so starting from a single cell, you can get some cool rocket-like pixel spaceships.)
+The idea is to just try some things and see what the automaton comes up with. Sometimes it gives pretty suprising results, so don't hesitate to press `R` a couple of times while the animation is running. (If you do so starting from a single cell, you can get some cool rocket-like pixel spaceships!)
 
 After randomizing the rule it can sometimes happen, that the automaton goes to a state of all black or white cells. If this occurs, you have to restart by pressing `X` to get back to other patterns again.
 
