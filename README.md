@@ -42,10 +42,12 @@ It comes preconfigured for MacOS. Just run `build.sh` to invoke `make`.
   2. Run `build.sh` to compile the program
  
 **Linux:**
-  - You know what to do :)
+ 
+ You know what to do :)
  
  **Windows:**
- Unfortunately, the ncurses library is only available to UNIX-like operating systems.
+ 
+ Unfortunately, the ncurses library is only available to UNIX-like operating systems.  
  (There should be workarounds if you know your way around such things..)
 
 ## How to use?
