@@ -30,8 +30,9 @@ The ncurses library, wrapped in C++, is used to render all graphics on the termi
 The **ncurses-Cellular-Automaton** is a command line program with a text-based user interface. It's a real-time implementation, that allows for continuous animation or stepwise operation. Both rule and initial conditions can be set or randomized. Rule randomization also works when the animation is running. You can always use the output of one rule and apply a different one to it. This gives some interesting sequences (if you're lucky). 
 
 ## Installation
-The project is built using CMake and is therefore easily compiled on most operating systems.
-It is preconfigured for MacOS or other UNIX-based environments. Just run `build.sh` to invoke `make`.
+The project is built using CMake and should be easily compiled on all UNIX-based operating systems.
+It comes preconfigured for MacOS. Just run `build.sh` to invoke `make`.
+(Sorry Windows users, ncurses graphics are not available to you natively..)
 
 `configure.sh` is used in case the `CMakeLists.txt` is updated.  
 `rule.sh` just runs the executable in the build folder.
@@ -45,6 +46,7 @@ It is preconfigured for MacOS or other UNIX-based environments. Just run `build.
  
  **Windows:**
  Unfortunately, the ncurses library is only available to UNIX-like operating systems.
+ (There should be workarounds if you know your way around such things..)
 
 ## How to use?
 Just pass a rule to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. A hacky way to add more "pixels" (cells = characters) is decreasing the font size of your terminal, though the interface can become hard to read, if you go too far. Resizing the window or font needs to be done before the program is started.
