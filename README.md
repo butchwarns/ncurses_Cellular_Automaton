@@ -2,8 +2,8 @@
 An elementary cellular automaton with a text-based user interface for your terminal.  
 
 ## Motivation
-This project is my attempt at making "Rule 30", a cellular automaton introduced by Stephen Wolfram in 1983, somewhat more easily explorable for the interested.
-The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time.  
+This project is my attempt at making "Rule 30", a cellular automaton introduced by Stephen Wolfram in 1983, somewhat explorable for the interested.
+The **ncurses-Cellular-Automaton** lets you quickly try out all of the 256 rules on different starting conditions and get a feel for how an elementary CA works in real-time, on the command line.
 
 I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolframscience.com/nks/) for an introduction to the mechanics behind rule 30 and other cellular automata.
 
@@ -11,7 +11,7 @@ I suggest reading Wolfram's (free) book [A New Kind of Science](https://www.wolf
 The animation can flicker quite a bit at times, so please take care if you are sensitive to those kind of things!
 
 ## Project status
-Functional work in progress. I do intend to add more features in the future.
+Functional work in progress. I do intend to add more features sometime in the future.
 
 ## Code style
 [![js-standard-style](https://img.shields.io/badge/code%20style-stroustrup-brightgreen.svg?style=flat)](https://www.stroustrup.com/bs_faq2.html#layout-style)
