@@ -41,8 +41,8 @@ Just run `build.sh` to invoke `make`.
   1. `git clone` the repository
   2. Run `build.sh` to compile the program
 
- Make sure ncurses is installed on your system. Don't forget to get the development files :)  
- (E.g. Fedora users need `ncurses-devel`)
+ Make sure ncurses is installed on your system. Don't forget to get the development files on Linux :)  
+ Should be something along the lines of `ncurses-devel`.
  
  **Windows:**
  
