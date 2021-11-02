@@ -32,7 +32,6 @@ The **ncurses-Cellular-Automaton** is a command line program with a text-based u
 ## Installation
 The project is built using CMake and should be easily compiled on all UNIX-based operating systems.
 Just run `build.sh` to invoke `make`.
-(Sorry Windows users, ncurses graphics are not available to you natively..)
 
 `configure.sh` is used in case the `CMakeLists.txt` is updated.  
 `rule.sh` just runs the executable in the build folder.
