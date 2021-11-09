@@ -49,7 +49,7 @@ Just run `build.sh` to invoke `make`.
  (There should be workarounds if you know your way around such things..)
 
 ## How to use?
-Just pass a rule number to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. A hacky way to add more "pixels" (cells = characters) is decreasing the font size of your terminal, though the interface can become hard to read, if you go too far. Resizing the window or font needs to be done before the program is started.
+Just pass a rule number to `rule.sh` (or the executable) to initialise the automaton. I suggest maximizing the terminal window beforehand to get the most detailed patterns. A hacky way to add more cells is decreasing the font size of your terminal, though the interface can become hard to read, if you go too far. Resizing the window or font needs to be done before the program is started.
 
 The following keybindings control the software:
 
