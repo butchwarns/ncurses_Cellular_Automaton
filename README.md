@@ -1,4 +1,7 @@
 # ncurses_Cellular_Automaton
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![js-standard-style](https://img.shields.io/badge/code%20style-stroustrup-brightgreen.svg?style=flat)](https://www.stroustrup.com/bs_faq2.html#layout-style)
+
 An elementary cellular automaton with a text-based user interface for your terminal.  
 
 ## Motivation
@@ -12,9 +15,6 @@ The animation can flicker quite a bit at times, so please take care if you are s
 
 ## Project status
 Functional work in progress. I do intend to add more features sometime in the future.
-
-## Code style
-[![js-standard-style](https://img.shields.io/badge/code%20style-stroustrup-brightgreen.svg?style=flat)](https://www.stroustrup.com/bs_faq2.html#layout-style)
  
 ## Screenshots
 ![Rule 18 starting from a single cell](/images/rule_18_single_cell.png?raw=true "Rule 18 starting from a single cell")
