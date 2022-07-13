@@ -54,7 +54,7 @@ The following keybindings control the software:
 
 - `S` Run/halt the animation
 - `N` Advance to next state
-- `T` Enter rule (0-255)
+- `T` Enter rule (0-255) (<- TODO: Fix bug that crashes program occasionaly on entering new rule manually)
 - `R` New random rule
 - `X` Reset to initial state
 - `I` Toggle randomization of inital conditions
