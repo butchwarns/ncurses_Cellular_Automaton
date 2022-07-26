@@ -24,124 +24,114 @@ SOFTWARE.
 
 #include "Brain.hpp"
 
-Brain::Brain(Automaton *_ca, Display *_disp) : ca (_ca), disp (_disp), running (false)
-    {
+Brain::Brain(Automaton *_ca, Display *_disp) : ca(_ca), disp(_disp), running(false)
+{
+}
 
-    }
-
-Brain::~Brain(){}
-
+Brain::~Brain() {}
 
 void Brain::init()
-    {
-        // Initialise automaton
-        ca->init();
+{
+    // Initialise automaton
+    ca->init();
 
-        // Display the rule and its bit representation
-        disp->displayRule (ca->getRule(), ca->getRuleBits());
+    // Display the rule and its bit representation
+    disp->displayRule(ca->getRule(), ca->getRuleBits());
 
-        // Display whether seed is randomized
-        disp->displaySeedRandomized (ca->getStateRandomized());
+    // Display whether seed is randomized
+    disp->displaySeedRandomized(ca->getStateRandomized());
 
-        // Display seed
-        next();
-    }
-
+    // Display seed
+    next();
+}
 
 void Brain::reset()
-    {
-        // Reset automaton and display
-        ca->reset();
-        disp->reset();
-    }
-
+{
+    // Reset automaton and display
+    ca->reset();
+    disp->reset();
+}
 
 void Brain::runHalt()
-    {
-        // Toggle animation
-        running = !running;
-    }
-
+{
+    // Toggle animation
+    running = !running;
+}
 
 bool Brain::isRunning()
-    {
-        return running;
-    }
-
+{
+    return running;
+}
 
 void Brain::next()
+{
+    // If last line is passed, go back to first line
+    if (disp->getPosition() >= disp->getAutomatonWinRows() - 1)
     {
-        // If last line is passed, go back to first line
-        if (disp->getPosition() >= disp->getAutomatonWinRows() - 1)
-           {
-               // disp->reset();
-               // disp->displayRule (ca->getRule(), ca->getRuleBits());
+        // disp->reset();
+        // disp->displayRule (ca->getRule(), ca->getRuleBits());
 
-               disp->displayCanvas();
-            }
-        else
-            {
-                // Display current state
-                disp->displayState (ca->getState(), disp->getPosition());
-            }
-
-        // Advance Automaton state
-        ca->advanceState();
-
-        // Move one line down
-        disp->advancePosition();
-
-        // Add next state to canvas
-        disp->advanceCanvas (ca->getState());
+        disp->displayCanvas();
+    }
+    else
+    {
+        // Display current state
+        disp->displayState(ca->getState(), disp->getPosition());
     }
 
+    // Advance Automaton state
+    ca->advanceState();
+
+    // Move one line down
+    disp->advancePosition();
+
+    // Add next state to canvas
+    disp->advanceCanvas(ca->getState());
+}
 
 void Brain::restartRandomized()
-    {
-        // Reset automaton and display
-        // reset();
+{
+    // Reset automaton and display
+    // reset();
 
-        // Init again
-        // init()
+    // Init again
+    // init()
 
-        // Set random rule
-        randomize();
+    // Set random rule
+    randomize();
 
-        // Display new rule
-        disp->displayRule(ca->getRule(), ca->getRuleBits());
-    }
-
+    // Display new rule
+    disp->displayRule(ca->getRule(), ca->getRuleBits());
+}
 
 void Brain::randomize()
-    {
-        // Seed uniformly distributed rng for random rule
-        std::random_device randDevice;
-        std::mt19937 mersenneTwister(randDevice());
-        std::uniform_real_distribution<double> distribution (0.0, 255.0);
+{
+    // Seed uniformly distributed rng for random rule
+    std::random_device randDevice;
+    std::mt19937 mersenneTwister(randDevice());
+    std::uniform_real_distribution<double> distribution(0.0, 255.0);
 
-        int randomRule = distribution (mersenneTwister);
-        ca->setRule (randomRule);
-    }
-
+    int randomRule = distribution(mersenneTwister);
+    ca->setRule(randomRule);
+}
 
 void Brain::toggleRandomizeState()
-   {
-       ca->setStateRandomized (!ca->getStateRandomized());
+{
+    ca->setStateRandomized(!ca->getStateRandomized());
 
-       // Display change on GUI
-       disp->displayGUI (ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
+    // Display change on GUI
+    disp->displayGUI(ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
 
-       // If not running and on starting position..
-       if (!isRunning() && disp->getPosition() == 2)
-           {
-               reset();
-               init();
-           }
-   }
-
-
-void Brain::setRule ()
+    // If not running and on starting position..
+    if (!isRunning() && disp->getPosition() == 2)
     {
-        ca->setRule (disp->enterRule());
-        disp->displayGUI (ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
+        reset();
+        init();
     }
+}
+
+void Brain::setRule()
+{
+    ca->setRule(disp->enterRule());
+    disp->displayGUI(ca->getRule(), ca->getRuleBits(), ca->getStateRandomized());
+}

@@ -35,7 +35,8 @@ SOFTWARE.
  * Represents the inner workings of the elementary cellular automaton.
  */
 
-class Automaton {
+class Automaton
+{
 public:
     /**
      * @brief Allocate memory and initialise neighbourhood, state and
@@ -44,7 +45,7 @@ public:
      * @param _stateLength Memory allocated in number of cells in state array
      */
 
-    Automaton (int _stateLength, int _rule);
+    Automaton(int _stateLength, int _rule);
 
     /**
      * @brief Free memory
@@ -64,36 +65,36 @@ public:
 
     void reset();
 
-   /**
-    * @brief Set rule to apply and store binary representation
-    *
-    * @param _rule Rule used to calculate next state
-    */
+    /**
+     * @brief Set rule to apply and store binary representation
+     *
+     * @param _rule Rule used to calculate next state
+     */
 
-    void setRule (int _rule);
+    void setRule(int _rule);
 
-   /**
-    * @brief Returns rule currently set
-    */
+    /**
+     * @brief Returns rule currently set
+     */
 
     int getRule();
 
-   /**
-    * @brief Determine bit representation of rule and store it
-    *
-    * Binary representation of current rule is calculated
-    * and stored in heap allocated member array.
-    */
+    /**
+     * @brief Determine bit representation of rule and store it
+     *
+     * Binary representation of current rule is calculated
+     * and stored in heap allocated member array.
+     */
 
-    void calculateRuleBits ();
+    void calculateRuleBits();
 
-   /**
-    * @brief Returns rule bits array
-    *
-    * @return array of rule bits
-    */
+    /**
+     * @brief Returns rule bits array
+     *
+     * @return array of rule bits
+     */
 
-    bool* getRuleBits();
+    bool *getRuleBits();
 
     /**
      * @brief Calculate next state, then current state becomes next state
@@ -107,29 +108,28 @@ public:
      * @return Pointer to heap allocated current state array
      */
 
-    bool* getState();
+    bool *getState();
 
+    /**
+     * @brief Set whether state should be randomized on initialisation
+     *
+     * @param _stateRandomized Bool on whether inital conditions are arandomized
+     */
 
-   /**
-    * @brief Set whether state should be randomized on initialisation
-    *
-    * @param _stateRandomized Bool on whether inital conditions are arandomized
-    */
+    void setStateRandomized(bool _stateRandomized);
 
-    void setStateRandomized (bool _stateRandomized);
-
-   /**
-    * @brief Get whether initial state is randomized
-    *
-    * @return Bool indicating whether initial states are randomized
-    */
+    /**
+     * @brief Get whether initial state is randomized
+     *
+     * @return Bool indicating whether initial states are randomized
+     */
 
     bool getStateRandomized();
 
 private:
-   /**
-    * @brief Allocated state memory in number of cells
-    */
+    /**
+     * @brief Allocated state memory in number of cells
+     */
 
     int stateLength;
 
@@ -145,9 +145,9 @@ private:
 
     bool *nextState;
 
-   /**
-    * @brief Pointer to the heap allocated cell neighbourhood array
-    */
+    /**
+     * @brief Pointer to the heap allocated cell neighbourhood array
+     */
 
     bool *neighbourhoodBits;
 
@@ -157,18 +157,18 @@ private:
 
     int rule;
 
-   /**
-    * @brief Bool saying whether the state should be randomized on initialization
-    */
+    /**
+     * @brief Bool saying whether the state should be randomized on initialization
+     */
 
     bool stateRandomized;
 
-   /**
-    * @brief Pointer to heap allocated rule binary representation
-    *
-    * Array of bools representing bits of the current rule.
-    * Bits are in reverse order, i.e., LSB at index zero.
-    */
+    /**
+     * @brief Pointer to heap allocated rule binary representation
+     *
+     * Array of bools representing bits of the current rule.
+     * Bits are in reverse order, i.e., LSB at index zero.
+     */
 
     bool *ruleBits;
 };
