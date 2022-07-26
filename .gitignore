@@ -55,8 +55,8 @@ _deps
 # Build folder
 ##############################
 
-/build
-[Bb][Uu][Ii][Ll][Dd]
+build/*
+!build/build.sh
 
 ##############################
 # Mac related stuff
