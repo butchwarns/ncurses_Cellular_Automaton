@@ -69,7 +69,7 @@ After randomizing the rule it can sometimes happen, that the automaton goes to a
 Documentation files are not hosted currently, but they are included in the project files. Open _/documentation/html/index.html_ in your browser to access the documentation in case you want an easier time understanding the code.
 
 ## License
-The **ncurses-Cellular-Automaton** project is released under the MIT license.
+The **ncurses-Cellular-Automaton** project is licensed under the BSD-2-Clause.
 
 Copyright © 2021 Butch Warns
 
