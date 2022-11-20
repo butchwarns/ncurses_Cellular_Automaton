@@ -1,5 +1,6 @@
 # ncurses_Cellular_Automaton
-[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+![[OPEN_SOURCE_HEART_BADGE]](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
+![[BSD_2_CLAUSE_LICENSE_BADGE]](https://img.shields.io/badge/License-BSD&#8722;2&#8722;Clause-blue.svg)
 
 An elementary cellular automaton with a text-based user interface for your terminal.  
 
